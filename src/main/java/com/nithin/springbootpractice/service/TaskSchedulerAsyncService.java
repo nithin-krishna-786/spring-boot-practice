@@ -16,7 +16,9 @@ public class TaskSchedulerAsyncService {
 	}
 
 	private void executeTask(Task task) {
-		System.out.println("Executing Task:"+task.getTaskName());
+		for(int i=1;i<=5;i++)
+				System.out.println(i);
+		System.out.println("Completed Task:"+task.getTaskName());
 	}
 
 }
