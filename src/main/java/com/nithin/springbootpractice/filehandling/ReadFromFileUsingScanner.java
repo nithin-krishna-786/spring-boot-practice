@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.service;
+package com.nithin.springbootpractice.filehandling;
 
 import java.io.File;
 import java.util.Scanner;

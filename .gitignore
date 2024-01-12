@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/java/com/nithin/springbootpractice/dto/RegisterDto.java
+/src/main/java/com/nithin/springbootpractice/dto/TodoDto.java
+/src/main/java/com/nithin/springbootpractice/entity/Role.java
+/src/main/java/com/nithin/springbootpractice/exceptions/TodoAPIException.java
+/src/main/java/com/nithin/springbootpractice/repository/RoleRepository.java
+/src/main/java/com/nithin/springbootpractice/repository/TodoRepository.java
+/src/main/java/com/nithin/springbootpractice/service/AuthService.java
+/src/main/java/com/nithin/springbootpractice/service/AuthServiceImpl.java
