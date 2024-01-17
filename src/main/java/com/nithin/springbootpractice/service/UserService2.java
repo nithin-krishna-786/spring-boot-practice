@@ -9,7 +9,7 @@ import com.nithin.springbootpractice.entity.User;
 import com.nithin.springbootpractice.repository.UserRepository;
 
 @Service
-public class UserService {
+public class UserService2 {
 	
 	@Autowired
 	private UserRepository userRepository;

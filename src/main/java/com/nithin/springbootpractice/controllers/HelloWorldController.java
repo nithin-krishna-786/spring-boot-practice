@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nithin.springbootpractice.entity.User;
-import com.nithin.springbootpractice.service.UserService;
+import com.nithin.springbootpractice.service.UserService2;
 
 
 @RestController("/api")
 public class HelloWorldController {
 
 	@Autowired
-	private UserService userService;
+	private UserService2 userService;
 
 	@GetMapping("/hello/{name}")
 	public String sayHello(@PathVariable String name) {
