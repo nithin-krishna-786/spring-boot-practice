@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.onetomany.bidirectional;
+package com.nithin.springbootpractice.onetomany.bidirectional.mapping;
 
 
 import lombok.*;

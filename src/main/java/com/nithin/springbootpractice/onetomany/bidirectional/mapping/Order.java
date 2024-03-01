@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.onetomany.bidirectional;
+package com.nithin.springbootpractice.onetomany.bidirectional.mapping;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -18,6 +18,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     private String orderTrackingNumber;
     private int totalQuantity;
     private BigDecimal totalPrice;

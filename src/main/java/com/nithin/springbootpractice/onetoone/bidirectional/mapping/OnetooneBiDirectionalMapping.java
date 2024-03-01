@@ -7,10 +7,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class SpringBootPracticeApplication {
+public class OnetooneBiDirectionalMapping {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootPracticeApplication.class, args);
+		SpringApplication.run(OnetooneBiDirectionalMapping.class, args);
 	}
 
 }

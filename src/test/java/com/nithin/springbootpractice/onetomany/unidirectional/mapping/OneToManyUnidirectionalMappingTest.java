@@ -17,7 +17,6 @@ public class OneToManyUnidirectionalMappingTest {
     @Autowired
     private OrderRepository orderRepository;
 
-    // save order along with also save it's order items
     @Test
     void saveOrderMethod(){
         Order order = new Order();
