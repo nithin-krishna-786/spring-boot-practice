@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.springdatajpa.query;
+package com.nithin.springbootpractice.springdatajpa;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
