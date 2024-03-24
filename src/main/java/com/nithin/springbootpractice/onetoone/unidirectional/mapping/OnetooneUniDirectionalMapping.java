@@ -1,4 +1,4 @@
-	package com.nithin.springbootpractice.onetoone.unidirectional.mapping;
+package com.nithin.springbootpractice.onetoone.unidirectional.mapping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
