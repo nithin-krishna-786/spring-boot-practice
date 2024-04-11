@@ -1,11 +1,9 @@
-package com.nithin.springbootpractice.service;
+package com.nithin.springbootpractice.multithreading;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.stereotype.Service;
-
-import com.nithin.springbootpractice.entity.Task;
 
 @Service
 public class TaskSchedulerTPEService {

@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nithin.springbootpractice.entity.User;
-import com.nithin.springbootpractice.service.UserService2;
+import com.nithin.springbootpractice.repository.User;
+import com.nithin.springbootpractice.repository.UserService;
 
 
 @RestController("/api")
 public class HelloWorldController {
 
 	@Autowired
-	private UserService2 userService;
+	private UserService userService;
 
 	@GetMapping("/hello/{name}")
 	public String sayHello(@PathVariable String name) {

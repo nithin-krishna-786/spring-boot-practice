@@ -1,15 +1,12 @@
-package com.nithin.springbootpractice.service;
+package com.nithin.springbootpractice.repository;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nithin.springbootpractice.entity.User;
-import com.nithin.springbootpractice.repository.UserRepository;
-
 @Service
-public class UserService2 {
+public class UserService {
 	
 	@Autowired
 	private UserRepository userRepository;

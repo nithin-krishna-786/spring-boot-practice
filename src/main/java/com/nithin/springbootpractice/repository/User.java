@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.entity;
+package com.nithin.springbootpractice.repository;
 
 import jakarta.persistence.*;
 import lombok.Data;
