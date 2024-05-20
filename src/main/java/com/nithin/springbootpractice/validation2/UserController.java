@@ -36,7 +36,7 @@ public class UserController {
 			errorMessage.append("Total Errors:").append(bindingResult.getErrorCount()).append(" ");
 
 			for (FieldError error : bindingResult.getFieldErrors()) {
-				errorMessage.append("Field:").append(error.getField()).append(" Error:")
+				errorMessage.append("\n").append("Field:").append(error.getField()).append(" Error:")
 						.append(error.getDefaultMessage()).append(" ");
 			}
 
