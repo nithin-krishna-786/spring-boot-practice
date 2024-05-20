@@ -1,4 +1,4 @@
-package com.nithin.springbootpractice.fetchtype.lazy;
+package com.nithin.springbootpractice.jsonignore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

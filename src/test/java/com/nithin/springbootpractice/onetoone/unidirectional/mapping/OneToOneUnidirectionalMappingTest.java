@@ -11,6 +11,9 @@ public class OneToOneUnidirectionalMappingTest {
 
     @Autowired
     private OrderRepository orderRepository;
+    
+    @Autowired
+    private AddressRepository addressRepository;
 
     @Test
     void saveOrderMethod(){
@@ -26,6 +29,29 @@ public class OneToOneUnidirectionalMappingTest {
         address.setState("Maharashtra");
         address.setCountry("India");
         address.setZipCode("411047");
+
+        order.setBillingAddress(address);
+
+        orderRepository.save(order);
+
+    }
+    
+    @Test
+    void saveOrderMethod2(){
+        Order order = new Order();
+        order.setOrderTrackingNumber("1000ABC");
+        order.setTotalQuantity(5);
+        order.setStatus("IN PROGRESS");
+        order.setTotalPrice(new BigDecimal(1000));
+
+        Address address = new Address();
+        address.setCity("Pune");
+        address.setStreet("Kothrud");
+        address.setState("Maharashtra");
+        address.setCountry("India");
+        address.setZipCode("411047");
+        
+        address = addressRepository.save(address);
 
         order.setBillingAddress(address);
 
