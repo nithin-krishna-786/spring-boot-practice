@@ -2,6 +2,7 @@ package com.nithin.springbootpractice.validation2;
 
 import java.time.LocalDate;
 
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
@@ -17,7 +18,6 @@ import lombok.Data;
 public class UserDTO {
 
 	@NotEmpty(message = "Name shudn't be empty")
-	@Column(unique = true, name = "name")
 	private String name;
 
 	@Past(message = "Birth Date should be in the past")

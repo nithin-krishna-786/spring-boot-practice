@@ -36,16 +36,29 @@ public class UserController {
 
 	@PostMapping
 	public ResponseEntity<?> createUser(@RequestBody @Valid UserDTO userDTO, BindingResult bindingResult) {
-
+		
+		
 		//THIS CODE PROVIDES ERROR MESSAGES AT INDIVIDUAL ATTRIBUTE LEVEL	
+		Boolean errorExists = false;
+		Map<String, String> errors = new HashMap<>();
 		if (bindingResult.hasErrors()) {
-			Map<String, String> errors = new HashMap<>();
+			errorExists = true;
 			bindingResult.getFieldErrors().forEach(error -> {
 				errors.put(error.getField(), error.getDefaultMessage());
 			});
-			return ResponseEntity.badRequest().body(errors);
+//			return ResponseEntity.badRequest().body(errors);
 		}
-
+		
+		//CHECK IF PHONENUMBER IS UNIQUE
+		 Boolean phoneNumberExists = userRepository.existsByPhoneNumber(userDTO.getPhoneNumber());
+		 if(phoneNumberExists)
+		 {	 
+			 errorExists = true;
+			 errors.put("phoneNumber","Phone number already exists !!");
+		 }	 
+		 if(errorExists)
+			 return ResponseEntity.badRequest().body(errors);
+	
 		User user = new User();
 		user.setName(userDTO.getName());
 		user.setBirthDate(userDTO.getBirthDate());
@@ -58,3 +71,31 @@ public class UserController {
 	}
 
 }
+//Display the error messages in your ReactJS form
+/*
+ *
+ *<input
+  type="text"
+  name="phoneNumber"
+  value={user.phoneNumber}
+  onChange={handleChange}
+/>
+{errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
+
+<input
+  type="text"
+  name="name"
+  value={user.name}
+  onChange={handleChange}
+/>
+{errors.name && <div className="error">{errors.name}</div>}
+
+<input
+  type="date"
+  name="birthdate"
+  value={user.birthdate}
+  onChange={handleChange}
+/>
+{errors.birthdate && <div className="error">{errors.birthdate}</div>}
+ * 
+ */ 
