@@ -1,0 +1,30 @@
+package com.nithin.springbootpractice.validation3;
+
+import java.time.LocalDate;
+
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Pattern;
+import lombok.Data;
+
+@Data
+public class UserDTO {
+
+	@NotEmpty(message = "Name shudn't be empty")
+	private String name;
+
+	@Past(message = "Birth Date should be in the past")
+	private LocalDate birthDate;
+
+	@Pattern(regexp = "^$|^\\d{10}$", message = "Phone number should be empty or consist of exactly 10 digits")
+	@UniquePhoneNumber(message = "Phone number should be Unique")
+	private String phoneNumber;
+
+	public UserDTO(Integer id, String name, LocalDate birthDate, String phoneNumber) {
+		this.name = name;
+		this.birthDate = birthDate;
+		this.phoneNumber = phoneNumber;
+	}
+
+}
