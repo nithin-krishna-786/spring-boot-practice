@@ -15,8 +15,8 @@ import com.twilio.rest.api.v2010.account.Message;
 @RequestMapping("/api/sms")
 public class SMSController {
 	
-	private String ACCOUNT_SID="ACf3ece0d2d2c0a6a63b073cab689fe995";
-	private String AUTH_TOKEN="8b7269fad243cb90b4b39cf64565b193";
+	private String ACCOUNT_SID="ACCOUNT_SID";
+	private String AUTH_TOKEN="AUTH_TOKEN";
 	
 	@PostMapping("/send")
 	public ResponseEntity<SMSMessage>sendSMS(@RequestBody SMSMessage smsReq){
